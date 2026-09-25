@@ -1,38 +1,29 @@
-@import "/home/yugg755/.config/swayosd/colors.css";
-
 window {
+
+    background: rgba(24, 24, 37, 0.55);
+    border-radius: 8px;
+    border: none;
+    padding: 4px 12px;
+}
+
+#parameterbar {
+
+    background: rgba(69, 71, 90, 0.4);
+    min-height: 4px;
+    min-width: 160px;
+    border-radius: 99px;
+    margin-left: 8px;
+}
+
+#parameterbar progress {
+
+    background: #cba6f7;
+    border-radius: 99px;
+}
+
+#image {
+
+    color: #cdd6f4;
+    font-size: 12px;
     background: transparent;
-}
-
-#osd {
-    background: alpha(@surface_container, 0.92);
-    border: 1px solid @outline_variant;
-    border-radius: 4px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-    padding: 6px 8px;
-    min-width: 80px;
-}
-
-#icon {
-    color: @primary;
-    font-size: 13px;
-    margin-right: 6px;
-}
-
-trough {
-    background: @surface_variant;
-    border-radius: 2px;
-    min-height: 3px;
-}
-
-highlight,
-progress {
-    background: @primary;
-    border-radius: 2px;
-}
-
-label {
-    color: @on_surface;
-    font-family: "JetBrainsMono Nerd Font";
-    font-size:8px;
 }

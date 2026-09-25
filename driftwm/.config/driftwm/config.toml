@@ -1,0 +1,341 @@
+autostart = [ "sudo modprobe uinput", "sudo rmmod hid_magicmouse", "~/.config/autostart/xwayland.sh", "env DISPLAY=:0 Xwayland :0 -rootless -terminate &", "sleep 1 && systemctl --user import-environment DISPLAY WAYLAND_DISPLAY", "sleep 1 && dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY", "systemctl --user import-environment DISPLAY WAYLAND_DISPLAY XDG_CURRENT_DESKTOP", "dbus-update-activation-environment --systemd WAYLAND_DISPLAY DISPLAY XDG_CURRENT_DESKTOP", "eval $(gnome-keyring-daemon --start --components=ssh) && systemctl --user import-environment SSH_AUTH_SOCK && dbus-update-activation-environment SSH_AUTH_SOCK", "/usr/libexec/polkit-gnome-authentication-agent-1", "swayosd-server --top-margin 0.95", "swaync", "waybar -c ~/.config/waybar/taskbar.jsonc -s ~/.config/waybar/taskbar.css", "sleep 1 && waybar -c ~/.config/waybar/config.jsonc -s ~/.config/waybar/style.css", "vorta -d", "~/Documents/work/scripts/driftwm/extras/scripts/battery_notify.sh", "~/Documents/work/scripts/driftwm/extras/scripts/theme-watch.sh", "swayidle -w timeout 300 'brightnessctl -s set 10%' resume 'brightnessctl -r' timeout 330 '~/Documents/work/scripts/driftwm/extras/scripts/lock.sh' timeout 600 'systemctl suspend' before-sleep '~/Documents/work/scripts/driftwm/extras/scripts/lock.sh'", "sway-audio-idle-inhibit", "wl-paste --type text --watch cliphist store", "wl-paste --type image --watch cliphist store", "/home/ikitto/.local/bin/drift-widgets" ]
+focus_follows_mouse = true
+window_placement = "auto"
+
+[env]
+PATH = "/home/ikitto/.local/bin:/usr/local/bin:/usr/bin:/bin"
+QT_QPA_PLATFORMTHEME = "qt6ct"
+
+[snap]
+same_edge = true
+edge_center = false
+gap = 10
+
+[input.keyboard]
+layout = "us,ru"
+options = "grp:caps_toggle,grp_led:caps"
+
+[input.mouse]
+accel_profile = "flat"
+accel_speed = 0
+
+[input.trackpad]
+accel_profile = "flat"
+accel_speed = 0
+tap_to_click = true
+
+[zoom]
+reset_on_new_window = true
+
+[cursor]
+theme = "Catppuccin-Mocha-Yellow"
+
+[decorations]
+default_mode = "minimal"
+bg_color = "#111111"
+fg_color = "#eeeeee"
+corner_radius = 10
+border_width = 3
+border_color_focused = "#262529"
+border_color = "#131315"
+
+[background]
+type = "wallpaper"
+path = "~/Пикчи/Обои/MakuXPNight.png"
+
+[output.outline]
+color = "#e5e2e3"
+thickness = 0
+
+[mouse]
+decoration_resize_snapped = true
+decoration_fit_snapped = true
+
+[keybindings]
+"mod+return" = "exec kitty"
+"mod+d" = "exec rofi -show drun"
+"mod+g" = "exec nautilus"
+"mod+shift+d" = "spawn ~/driftwm/extras/scripts/theme-toggle.sh"
+"mod+l" = "spawn ~/driftwm/extras/scripts/lock.sh"
+"mod+n" = "spawn swaync-client -t"
+XF86AudioRaiseVolume = "spawn swayosd-client --output-volume raise"
+XF86AudioLowerVolume = "spawn swayosd-client --output-volume lower"
+XF86AudioMute = "spawn swayosd-client --output-volume mute-toggle"
+XF86MonBrightnessUp = "spawn swayosd-client --brightness raise"
+XF86MonBrightnessDown = "spawn swayosd-client --brightness lower"
+"mod+s" = "exec rofi -show window"
+"mod+m" = "fit-window-snapped"
+"mod+shift+m" = "fit-window"
+"mod+v" = "exec sh -c 'cliphist list | rofi -dmenu -p Clipboard -theme-str \"listview { columns: 1; lines: 8; } element { padding: 4px 15px; } element-text { horizontal-align: 0; }\" | cliphist decode | wl-copy'"
+"Super+F11" = "exec grim -g \"$(slurp)\" - | tee ~/Pictures/Screenshot_$(date +%Y%m%d_%H%M%S).png | wl-copy"
+"Super+F12" = "exec grim - | tee ~/Pictures/Screenshot_$(date +%Y%m%d_%H%M%S).png | wl-copy"
+"Super+shift+F11" = "exec grim -g \"$(slurp)\" - | satty --filename - --output-filename ~/Pictures/Screenshot_$(date +%Y%m%d_%H%M%S).png"
+"Super+shift+F12" = "exec grim - | satty --filename - --output-filename ~/Pictures/Screenshot_$(date +%Y%m%d_%H%M%S).png"
+"mod+i" = "exec /home/ikitto/.local/bin/drift-shell-settings"
+"mod+q" = "close-window"
+
+[gestures.on-window]
+"alt+3-finger-swipe" = "resize-window-snapped"
+"alt+shift+3-finger-swipe" = "resize-window"
+
+[[outputs]]
+name = "HDMI-A-1"
+transform = "normal"
+
+[effects]
+blur_radius = 6
+blur_strength = 0.4
+animate_blur = false
+
+[[window_rules]]
+app_id = "drift-clock"
+position = [ -115, 248 ]
+widget = true
+decoration = "none"
+blur = false
+
+[[window_rules]]
+app_id = "drift-stats"
+position = [ -115, 0 ]
+widget = true
+decoration = "none"
+blur = false
+
+[[window_rules]]
+app_id = "drift-soundbar"
+position = [ -146, -230 ]
+widget = true
+decoration = "none"
+blur = false
+
+[[window_rules]]
+app_id = "drift-layout"
+position = [ 43, -230 ]
+widget = true
+decoration = "none"
+blur = false
+
+[[window_rules]]
+app_id = "drift-calendar"
+position = [ 190, 0 ]
+widget = true
+decoration = "none"
+blur = false
+
+[[window_rules]]
+app_id = "drift-weather"
+position = [ 190, 248 ]
+widget = true
+decoration = "none"
+blur = false
+
+[[window_rules]]
+app_id = "drift-notif"
+position = [ 158, -230 ]
+widget = true
+decoration = "none"
+blur = false
+
+[[window_rules]]
+app_id = "drift-power"
+position = [ 274, -230 ]
+widget = true
+decoration = "none"
+blur = false
+
+[[window_rules]]
+app_id = "drift-power-menu"
+position = [ 274, -390 ]
+widget = true
+decoration = "server"
+blur = false
+
+[[window_rules]]
+app_id = "drift-widgets"
+widget = true
+decoration = "none"
+blur = false
+
+[[window_rules]]
+title = "drift-widgets"
+position = [ 0, 0 ]
+size = [ 1140, 580 ]
+widget = true
+decoration = "none"
+blur = false
+
+[[window_rules]]
+title = "drift-clock"
+position = [ -115, 248 ]
+widget = true
+decoration = "none"
+blur = false
+
+[[window_rules]]
+title = "drift-stats"
+position = [ -115, 0 ]
+widget = true
+decoration = "none"
+blur = false
+
+[[window_rules]]
+title = "drift-soundbar"
+position = [ -146, -230 ]
+widget = true
+decoration = "none"
+blur = false
+
+[[window_rules]]
+title = "drift-layout"
+position = [ 43, -230 ]
+widget = true
+decoration = "none"
+blur = false
+
+[[window_rules]]
+title = "drift-calendar"
+position = [ 190, 0 ]
+widget = true
+decoration = "none"
+blur = false
+
+[[window_rules]]
+title = "drift-weather"
+position = [ 190, 248 ]
+widget = true
+decoration = "none"
+blur = false
+
+[[window_rules]]
+title = "drift-notif"
+position = [ 158, -230 ]
+widget = true
+decoration = "none"
+blur = false
+
+[[window_rules]]
+title = "drift-power"
+position = [ 274, -230 ]
+widget = true
+decoration = "none"
+blur = false
+
+[[window_rules]]
+app_id = "waybar"
+position = [ -332, 18 ]
+widget = true
+decoration = "none"
+opacity = 1
+corner_radius = 18
+
+[[window_rules]]
+app_id = "waybar"
+position = [ 9, -328 ]
+widget = true
+decoration = "none"
+corner_radius = 16
+
+[[window_rules]]
+title = "winit window"
+widget = true
+blur = false
+
+[[window_rules]]
+app_id = "com.system76.CosmicSettings"
+size = [ 500, 725 ]
+blur = false
+
+[[window_rules]]
+app_id = "auygram"
+decoration = "server"
+blur = false
+
+[[window_rules]]
+app_id = "swaync-control-center"
+blur = false
+
+[[window_rules]]
+app_id = "swaync-notification-window"
+blur = false
+
+[[window_rules]]
+app_id = "rofi"
+blur = false
+
+[[window_rules]]
+app_id = "Kitty"
+size = [ 950, 580 ]
+blur = false
+
+[[window_rules]]
+app_id = "kitty"
+size = [ 950, 580 ]
+blur = false
+
+[[window_rules]]
+app_id = "zen"
+blur = false
+
+[[window_rules]]
+app_id = "swayosd"
+blur = true
+
+[[window_rules]]
+app_id = "spotify"
+blur = false
+
+[[window_rules]]
+app_id = "zen"
+title = "Картинка в картинке"
+sticky = true
+
+[[window_rules]]
+app_id = "zen"
+title = "Picture-in-Picture"
+sticky = true
+
+[[window_rules]]
+app_id = "firefox"
+title = "Picture-in-Picture"
+sticky = true
+
+[[window_rules]]
+app_id = "drift-shell-settings"
+decoration = "none"
+blur = false
+
+[[window_rules]]
+title = "drift-shell-settings"
+decoration = "none"
+blur = false
+
+[[window_rules]]
+app_id = "driftcontrol"
+decoration = "none"
+blur = false
+
+[[window_rules]]
+title = "driftcontrol"
+decoration = "none"
+blur = false
+
+[[window_rules]]
+title = "Drift Control Center"
+decoration = "none"
+blur = false
+
+[[window_rules]]
+app_id = "drift-widgets"
+decoration = "none"
+blur = false
+
+[[window_rules]]
+app_id = "blueman-manager"
+decoration = "none"
+blur = false
+
+[[window_rules]]
+app_id = "org.gnome.Calculator"
+title = "Калькулятор"
+decoration = "none"
+blur = false

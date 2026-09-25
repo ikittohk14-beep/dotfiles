@@ -1,0 +1,8 @@
+#!/bin/sh
+
+/usr/lib/xdg-desktop-portal-wlr &
+/usr/lib/xdg-desktop-portal &
+
+export XDG_CURRENT_DESKTOP=wlroots
+export QT_QPA_PLATFORM=wayland
+export MOZ_ENABLE_WAYLAND=1

@@ -1,0 +1,74 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "display": {
+    "separator": "│ ",
+    "color": {
+      "separator": "#555555",
+      "keys": "#777777"
+    }
+  },
+  "gif": "ryo.gif",
+  "gifStyle": "kitty",
+  "modules": [
+    {
+      "type": "title",
+      "format": "                 {user-name}"
+    },
+
+    {
+      "type": "os",
+      "key": "OS        ",
+      "format": "{pretty-name}"
+    },
+    {
+      "type": "host",
+      "key": "Host      "
+    },
+    {
+      "type": "kernel",
+      "key": "Kernel    ",
+      "format": "{sysname} {release}"
+    },
+    {
+      "type": "wm",
+      "key": "WM        ",
+      "format": "{pretty-name} ({protocol-name})"
+    },
+    "break",
+    {
+      "type": "cpu",
+      "key": "CPU       "
+    },
+    {
+      "type": "gpu",
+      "key": "GPU       ",
+      "format": "Radeon Vega Series"
+    },
+    {
+      "type": "memory",
+      "key": "Memory    ",
+      "format": "{used} / {total} ({percentage})"
+    },
+    {
+      "type": "disk",
+      "key": "Disk      ",
+      "folders": "/",
+      "format": "{size-used} / {size-total} ({size-percentage})"
+    },
+    "break",
+    {
+      "type": "packages",
+      "key": "Packages  ",
+      "format": "{pacman} (pacman)"
+    },
+    {
+      "type": "terminal",
+      "key": "Terminal  "
+    },
+    {
+      "type": "colors",
+      "key": "Colors    ",
+      "symbol": "circle"
+    }
+  ]
+}
