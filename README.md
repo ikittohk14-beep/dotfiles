@@ -43,33 +43,23 @@
 
 ---
 
-## 💻 Спецификация системы (System Specs)
+## 💻 Стек приложений для дотсов
 
-| Компонент | Значение |
-| :--- | :--- |
-| **ОС (Distribution)** | **CachyOS** (оптимизированный Arch Linux) |
-| **Ядро (Kernel)** | `Linux 7.1.8-1-cachyos` (компиляция под архитектуру, планировщик BORE) |
-| **Оконный менеджер (WM)** | [driftwm](https://github.com/malbiruk/driftwm) (Wayland-композитор на бесконечном холсте) |
-| **Процессор (CPU)** | AMD Ryzen 5 5600G with Radeon Graphics (6 ядер / 12 потоков, до ~4.56 ГГц) |
-| **Видеокарта (GPU)** | AMD Radeon Graphics (архитектура Vega / Cezanne APU, драйвер `amdgpu`) |
-| **Оперативная память (RAM)** | 16 GB DDR4 (~13.5 ГиБ доступно + 13.5 ГиБ ZRAM zram0) |
-| **Накопитель (Storage)** | NVMe SSD 500 GB (Btrfs с сабволюмами `@`, `@home`, `@var_cache`) |
-| **Эмулятор терминала** | [Kitty](https://sw.kovidgoyal.net/kitty/) |
-| **Оболочка (Shell)** | [Fish shell](https://fishshell.com/) 4.7.1 |
-| **Строка состояния (Bar)** | [Waybar](https://github.com/Alexays/Waybar) |
-| **Виджеты** | Собственные Python GTK-виджеты (`widgets/`) |
-| **Центр управления** | [drift-shell-settings](https://github.com/ikittohk14-beep/drift-shell-settings) |
-| **Системный инфо-фетчер** | [ikifetch](https://github.com/ikittohk14-beep/ikifetch) |
-| **Шрифт** | Inter Nerd Font / JetBrainsMono Nerd Font |
-
----
-
-## 🎨 Философия дизайна (Design Concept)
-
-- **Палитра:** Глубокий графитовый фон без размытий и прозрачности (`#131316`). Пастельные акценты: маття-зеленый (`#a3d4a0`), приглушенный фиолетовый (`#859aea`), пыльно-розовый и спокойный голубой.
-- **Геометрия окон:** Borderless & Rounded — отказ от классических рамок и заголовков. Аккуратные карточки со скругленными углами.
-- **Типографика:** Моноширинный шрифт, жесткая сетка и тонкие разделители (`|`).
-- **Графический минимализм:** Текстовая ASCII-эстетика и аккуратные цветные индикаторы в терминальной палитре.
+| Категория | Приложение / Компонент | Описание |
+| :--- | :--- | :--- |
+| **Операционная система** | **CachyOS** | Оптимизированный Arch Linux (ядро с планировщиком BORE) |
+| **Оконный менеджер (WM)** | [driftwm](https://github.com/malbiruk/driftwm) | Тайлинговый Wayland-композитор на бесконечном холсте |
+| **Панель состояния (Bar)** | [Waybar](https://github.com/Alexays/Waybar) | Кастомная плавающая панель с медиа, погодой и треем |
+| **Рабочие виджеты** | Python GTK Widgets (`widgets/`) | Собственные виджеты (часы, календарь, статистика CPU/RAM, погода) |
+| **Центр управления** | [drift-shell-settings](https://github.com/ikittohk14-beep/drift-shell-settings) | Графический центр настроек системы, Wi-Fi, Bluetooth, звука и окон |
+| **Эмулятор терминала** | [Kitty](https://sw.kovidgoyal.net/kitty/) | Быстрый GPU-терминал с поддержкой Kitty Graphics Protocol |
+| **Оболочка (Shell)** | [Fish shell](https://fishshell.com/) 4.7.1 | Интерактивный шелл с автодополнением и интеграцией `ikifetch` |
+| **Инфо-фетчер** | [ikifetch](https://github.com/ikittohk14-beep/ikifetch) | Авторский инфо-фетчер с поддержкой анимированных GIF |
+| **Уведомления** | [SwayNC](https://github.com/ErikReider/SwayNotificationCenter) | Центр уведомлений и виджетов для Wayland |
+| **Экранные индикаторы (OSD)** | [SwayOSD](https://github.com/ErikReider/SwayOSD) | Индикация изменения громкости, яркости и CapsLock |
+| **Меню запуска** | [Rofi](https://github.com/lbonn/rofi) (Wayland) | Минималистичное меню поиска и запуска приложений |
+| **Файловый менеджер** | [Yazi](https://github.com/sxyazi/yazi) / Nautilus | Быстрый терминальный и графический файловые менеджеры |
+| **Шрифты** | Inter Nerd Font / JetBrainsMono NF | Четкая моноширинная типографика с иконками Nerd |
 
 ---
 
