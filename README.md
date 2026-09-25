@@ -18,13 +18,13 @@
 </p>
 
 <p align="center">
-  <b>Минималистичные dotfiles для CachyOS с тайлинговым Wayland-композитором <a href="https://github.com/malbiruk/driftwm">driftwm</a>.</b><br/>
-  <i>Глубокий графитовый фон, пастельные акценты (маття-зеленый, приглушенный фиолетовый, пыльно-розовый), скругленные окна без рамок и авторские Python-виджеты.</i>
+  <b>Minimalist dotfiles for CachyOS featuring the <a href="https://github.com/malbiruk/driftwm">driftwm</a> infinite canvas tiling Wayland compositor.</b><br/>
+  <i>Deep graphite background, soft pastel accents (matcha green, muted purple, dusty rose), borderless rounded windows, and custom Python desktop widgets.</i>
 </p>
 
 ---
 
-## 🖼️ Скриншоты (Gallery)
+## 🖼️ Gallery
 
 <p align="center">
   <img src="./preview/Screenshot_20260921_210828.png" alt="Desktop Overview" width="100%" />
@@ -43,59 +43,59 @@
 
 ---
 
-## 💻 Стек приложений для дотсов
+## 💻 Software Stack
 
-| Категория | Приложение / Компонент | Описание |
+| Category | Component / Application | Description |
 | :--- | :--- | :--- |
-| **Операционная система** | **CachyOS** | Оптимизированный Arch Linux (ядро с планировщиком BORE) |
-| **Оконный менеджер (WM)** | [driftwm](https://github.com/malbiruk/driftwm) | Тайлинговый Wayland-композитор на бесконечном холсте |
-| **Панель состояния (Bar)** | [Waybar](https://github.com/Alexays/Waybar) | Кастомная плавающая панель с медиа, погодой и треем |
-| **Рабочие виджеты** | Python GTK Widgets (`widgets/`) | Собственные виджеты (часы, календарь, статистика CPU/RAM, погода) |
-| **Центр управления** | [drift-shell-settings](https://github.com/ikittohk14-beep/drift-shell-settings) | Графический центр настроек системы, Wi-Fi, Bluetooth, звука и окон |
-| **Эмулятор терминала** | [Kitty](https://sw.kovidgoyal.net/kitty/) | Быстрый GPU-терминал с поддержкой Kitty Graphics Protocol |
-| **Оболочка (Shell)** | [Fish shell](https://fishshell.com/) 4.7.1 | Интерактивный шелл с автодополнением и интеграцией `ikifetch` |
-| **Инфо-фетчер** | [ikifetch](https://github.com/ikittohk14-beep/ikifetch) | Авторский инфо-фетчер с поддержкой анимированных GIF |
-| **Уведомления** | [SwayNC](https://github.com/ErikReider/SwayNotificationCenter) | Центр уведомлений и виджетов для Wayland |
-| **Экранные индикаторы (OSD)** | [SwayOSD](https://github.com/ErikReider/SwayOSD) | Индикация изменения громкости, яркости и CapsLock |
-| **Меню запуска** | [Rofi](https://github.com/lbonn/rofi) (Wayland) | Минималистичное меню поиска и запуска приложений |
-| **Файловый менеджер** | [Yazi](https://github.com/sxyazi/yazi) / Nautilus | Быстрый терминальный и графический файловые менеджеры |
-| **Шрифты** | Inter Nerd Font / JetBrainsMono NF | Четкая моноширинная типографика с иконками Nerd |
+| **Operating System** | **CachyOS** | Performance-optimized Arch Linux (Linux kernel with BORE scheduler) |
+| **Window Manager** | [driftwm](https://github.com/malbiruk/driftwm) | Infinite canvas tiling Wayland compositor |
+| **Status Bar** | [Waybar](https://github.com/Alexays/Waybar) | Floating pill-style dock with media, weather, and tray drawer |
+| **Desktop Widgets** | Python GTK Widgets (`widgets/`) | Standalone widgets for clock, calendar, CPU/RAM monitor, and weather |
+| **Control Center** | [drift-shell-settings](https://github.com/ikittohk14-beep/drift-shell-settings) | GUI settings panel for Wi-Fi, Bluetooth, PipeWire audio, and window rules |
+| **Terminal Emulator** | [Kitty](https://sw.kovidgoyal.net/kitty/) | Fast GPU-accelerated terminal with Kitty Graphics Protocol |
+| **Shell** | [Fish shell](https://fishshell.com/) 4.7.1 | Interactive shell with autosuggestions and `ikifetch` integration |
+| **System Info Fetch** | [ikifetch](https://github.com/ikittohk14-beep/ikifetch) | Lightweight system fetcher with animated GIF playback support |
+| **Notification Center** | [SwayNC](https://github.com/ErikReider/SwayNotificationCenter) | Wayland notification center and widget panel |
+| **On-Screen Display** | [SwayOSD](https://github.com/ErikReider/SwayOSD) | Floating indicators for volume, brightness, and CapsLock |
+| **Application Launcher** | [Rofi](https://github.com/lbonn/rofi) (Wayland) | Minimalist application launcher styled in graphite palette |
+| **File Managers** | [Yazi](https://github.com/sxyazi/yazi) / Nautilus | Terminal and graphical file managers |
+| **Typography** | Inter Nerd Font / JetBrainsMono NF | Crisp monospace typography with Nerd Font glyphs |
 
 ---
 
-## 📦 Включенные компоненты (Components & Links)
+## 📦 Included Components
 
-- **[ikifetch](https://github.com/ikittohk14-beep/ikifetch)** — быстрый, легковесный системный фетчер на Python с поддержкой анимированных GIF и кэшированием кадров в терминале Kitty.
-- **[drift-shell-settings](https://github.com/ikittohk14-beep/drift-shell-settings)** — современная панель настроек для driftwm с интерактивным управлением Wi-Fi, Bluetooth, звуком PipeWire, обоями и правилами окон.
-- **`driftwm/`** — конфигурация композитора (`config.toml`), скрипты запуска XWayland и сервисов.
-- **`waybar/`** — кастомная верхняя панель в стиле pill-док с медиаплеером, погодой, статусом CPU/RAM и системным треем.
-- **`widgets/`** — набор автономных виджетов (часы, календарь, монитор ресурсов, погода, меню выключения).
-- **`kitty/`** — профиль терминала со шрифтом `Inter Nerd Font` и монохромно-пастельной темой.
-- **`fish/`** — функции интеграции `ikifetch`, алиасы и окружение.
-- **`swaync/` & `swayosd/`** — стилизованный центр уведомлений и индикаторы громкости/яркости.
-- **`rofi/`** — меню приложений в единой графитовой палитре.
+- **[ikifetch](https://github.com/ikittohk14-beep/ikifetch)** — Fast, lightweight Python system fetcher with animated GIF rendering and disk caching in Kitty.
+- **[drift-shell-settings](https://github.com/ikittohk14-beep/drift-shell-settings)** — Modern control center tailored for driftwm with management for Wi-Fi, Bluetooth, PipeWire audio, wallpapers, and window rules.
+- **`driftwm/`** — Compositor configuration (`config.toml`), XWayland setup, and startup scripts.
+- **`waybar/`** — Floating dock status bar with integrated media player, weather, resource stats, and collapsible tray drawer.
+- **`widgets/`** — Collection of custom Python desktop widgets (clock, calendar, system resources, weather, power menu).
+- **`kitty/`** — Terminal profile configured with `Inter Nerd Font` and pastel Mocha graphite theme.
+- **`fish/`** — Shell configuration, aliases, and `ikifetch` helper functions.
+- **`swaync/` & `swayosd/`** — Notification center styling and on-screen volume/brightness popups.
+- **`rofi/`** — Application menu styled in graphite tones.
 
 ---
 
-## 🚀 Установка (Installation)
+## 🚀 Installation
 
-### 1. Клонирование репозитория
+### 1. Clone the repository
 ```bash
 git clone https://github.com/ikittohk14-beep/dotfiles.git
 cd dotfiles
 ```
 
-### 2. Зависимости (CachyOS / Arch Linux)
+### 2. Install dependencies (CachyOS / Arch Linux)
 ```bash
-# Базовые пакеты и утилиты
+# Core packages and tools
 sudo pacman -S waybar kitty fish rofi swaync swayosd python python-pillow btop yazi micro git stow
 
-# Drift Shell Settings и ikifetch
+# ikifetch and Drift Shell Settings
 git clone https://github.com/ikittohk14-beep/ikifetch.git && cd ikifetch && ./install.sh && cd ..
 git clone https://github.com/ikittohk14-beep/drift-shell-settings.git
 ```
 
-### 3. Развертывание через GNU Stow
+### 3. Deploy with GNU Stow
 ```bash
 stow driftwm
 stow waybar
@@ -110,13 +110,13 @@ stow swayosd
 
 ---
 
-## ⌨️ Основные горячие клавиши (Keybindings)
+## ⌨️ Keybindings
 
-| Комбинация | Действие |
+| Shortcut | Action |
 | :--- | :--- |
-| `Super + Enter` | Терминал Kitty |
-| `Super + D` | Меню приложений (Rofi) |
-| `Super + G` | Проводник Nautilus |
-| `Super + N` | Центр уведомлений (SwayNC) |
-| `Super + Shift + D` | Переключение темы |
-| `Super + L` | Блокировка экрана |
+| `Super + Enter` | Kitty Terminal |
+| `Super + D` | Application Launcher (Rofi) |
+| `Super + G` | File Manager (Nautilus) |
+| `Super + N` | Notification Center (SwayNC) |
+| `Super + Shift + D` | Toggle Theme |
+| `Super + L` | Lock Screen |
